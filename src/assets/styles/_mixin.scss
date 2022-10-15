@@ -1,0 +1,5 @@
+@mixin braikpoint ($br) {
+   @media screen and (max-width: $br) {
+      @content;
+   }
+}

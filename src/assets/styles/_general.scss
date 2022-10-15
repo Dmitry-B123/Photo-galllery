@@ -24,7 +24,16 @@ li {
    list-style: none;
 }
 
+nav {
+   margin: 0;
+   padding: 0;
+}
+
 .container {
    max-width: 1290px;
    margin: 0 auto;
+
+   @include braikpoint (1350px) {
+      padding: 0 3%;
+   }
 }

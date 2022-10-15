@@ -1,10 +1,20 @@
+// fonts
 $fontTTR: "TTR";
 $fontTTB: "TTB";
 
+// background
 $bgfirst: #202020;
 $bgsecond: #4A4A4A;
 
+// color fonts
 $color1: #FFFFFF;
 
+// states
 $color-hover:#FF6E30;
 $color-active:#CE4307;
+
+// breakpoints
+$br-desktop-xl: 1200px;
+$br-tablet-lg: 1024px;
+$br-tablet-md: 768px;
+$br-mobile: 320px;

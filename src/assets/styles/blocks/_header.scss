@@ -1,6 +1,14 @@
 .header {
    background: $bgfirst;
-}
+
+   .header__info-inner {
+      display: none;
+
+      @include braikpoint (830px) {
+         display: flex;
+      }
+   }
+}   
 
 // header__main
 .header__main {
@@ -9,83 +17,179 @@
    justify-content: space-between;
    min-height: 8rem;
 
-   .header__list {
-      display: flex;
+   .header__info-inner {
+      display: none;
+
+      @include braikpoint (830px) {
+         display: flex;
+      }
    }
 
-   .header__item:not(:first-child) {
-      margin-left: 2rem;
+   .header__info-tel {
+      margin-right: 4rem;
+
+      @include braikpoint (580px) {
+         display: none;
+      }
    }
 
-   .header__link {
-      font-size: 1.6rem;
-      line-height: 2.1rem;
-      color: $color1;
-      font-family: $fontTTR;
-      display: block;
-      padding: 1.2rem 2.2rem;     
+   .header__info-link {
+      color: $color-hover;
    }
+   
+   .header__info-tel svg path {
+      fill: $color-hover;
+   }
+}
 
-   .header__link:hover {
-      background-color: $color-hover;
-   }
+.header__list {
+   display: flex;
 
-   .header__link:active,
-   .header__link:focus {
-      background-color: $color-active;
+   @include braikpoint (830px) {
+      display: none;
    }
+}
+
+.header__item:not(:first-child) {
+   margin-left: 2rem;
+
+   @include braikpoint (1350px) {
+      margin-left: 0;
+   }
+}
+
+.header__link {
+   font-size: 1.6rem;
+   line-height: 2.1rem;
+   color: $color1;
+   font-family: $fontTTR;
+   display: block;
+   padding: 1.2rem 2.2rem; 
+   
+   @include braikpoint ($br-desktop-xl) {
+      padding: 1.2rem 1.5rem;
+   }
+}
+
+.header__link:hover {
+   background-color: $color-hover;
+}
+
+.header__link:active,
+.header__link:focus {
+   background-color: $color-active;
 }
 
 // header__info
 .header__info {
    background: $bgsecond;
+   
+   .header__list {
+      display: none;
+   
+      @include braikpoint (830px) {
+         display: flex;
+         justify-content: space-between;
+         
+         .header__link {
+            padding: 1.2rem 2.2rem;
+         }
+      }
 
-   &-inner {
+      @include braikpoint (700px) {
+         .header__link {
+            padding: 1.2rem 1.2rem;
+         }
+      }
+
+      @include braikpoint (580px) {
+         display: none;
+      }
+   }
+
+   .header__list--active {
+      display: block;
+      text-align: center;
+      padding: 2rem 0;
+
+      .header__item {
+         position: relative;
+      }
+
+      .header__item::before {
+         content: "";
+         display: block;
+         position: absolute;
+         transform: translateX(-50%);
+         left: 50%;
+         bottom: 0;
+         width: 60%;
+         height: 1px;
+         background-color: $color-hover;
+      }
+   }
+}
+
+.header__info-inner {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   min-height: 4.5rem;
+
+   @include braikpoint (830px) {
+      display: none;
+   }
+
+   @include braikpoint (580px) {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      min-height: 4.5rem;
-   }
 
-   &-tel,
-   &-search {
-      display: flex;
-      align-items: center;
-      font-family: $fontTTB;
-   }
-   
-   &-link {
-      color: $color1;
-      font-size: 1.5rem;
-      line-height: 2rem;
-      margin-left: 3px;
-   }
+      .header__info-search--580 {
+         display: none;
+      }
 
-   &-tel:hover svg path {
-      fill: $color-hover;
+      .header__info-tel {
+         color: $color-hover;
+      }
    }
+}
 
-   &-tel:active svg path,
-   &-tel:focus svg path {
-      fill: $color-active;
-   }
+.header__info-tel,
+.header__info-search {
+   display: flex;
+   align-items: center;
+   font-family: $fontTTB;
+}
+
+.header__info-link {
+   color: $color1;
+   font-size: 1.5rem;
+   line-height: 2rem;
+   margin-left: 3px;
+}
+
+.header__info-tel:hover svg path {
+   fill: $color-hover;
+}
+
+.header__info-tel:active svg path,
+.header__info-tel:focus svg path {
+   fill: $color-active;
+}
 
 
-   &-tel:hover .header__info-link {
-      color: $color-hover;
-   }
+.header__info-tel:hover .header__info-link {
+   color: $color-hover;
+}
 
-   &-tel:active .header__info-link,
-   &-tel:focus .header__info-link {
-      color: $color-active;
-   }
-   
-   
+.header__info-tel:active .header__info-link,
+.header__info-tel:focus .header__info-link {
+   color: $color-active;
 }
 
 // header-form
 .header-form {
-   position: relative;
+   display: flex;
 }
 
 .header-form__input {
@@ -120,4 +224,40 @@
    position: absolute;
    bottom: 0;
    left: 0;
+}
+
+.header__main {
+   .header__info-search {
+      position: relative;
+
+      .header-form {
+         position: absolute;
+         min-width: 22.6rem;
+         top: -10px;
+         right: 35px;
+         background: rgb(210, 188, 188);
+         border-radius: 10px;
+         padding: 10px;
+         transition: transform 0.3s linear;
+         transform: scaleX(0);
+         transform-origin: right;
+
+         .header-form__line {
+            display: none;
+         }
+
+         .header-form__btn {
+            border: 1px solid $color1;
+            border-radius: 30%;
+            background: inherit;
+            font-size: 2rem;
+            color: $color1;
+            margin-left: 2px;
+         }
+      }
+
+      .header-form--active {
+         transform: scaleX(1);
+      }
+   }
 }

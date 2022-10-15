@@ -2,6 +2,10 @@
    display: flex;
    justify-content: space-between;
    width: 13rem;
+
+   @include braikpoint (970px) {
+      display: none;
+   }
 }
 
 .social__link:hover svg path {
