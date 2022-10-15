@@ -1,7 +1,10 @@
-*, *::after, *::before {
-   box-sizing: border-box;
-}
+// normalize.css
+@import "normalize";
 
-body {
-   background: rgb(211, 88, 88);
-}
+@import "var";
+@import "fonts";
+@import "general";
+
+//blocks
+@import "blocks/header";
+@import "blocks/social";

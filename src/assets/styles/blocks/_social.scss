@@ -1,0 +1,14 @@
+.social {
+   display: flex;
+   justify-content: space-between;
+   width: 13rem;
+}
+
+.social__link:hover svg path {
+   fill: $color-hover;
+}
+
+.social__link:active svg path,
+.social__link:focus svg path {
+   fill: $color-active;
+}
