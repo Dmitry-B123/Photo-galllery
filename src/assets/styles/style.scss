@@ -3,11 +3,14 @@
 
 @import "var";
 @import "mixin";
+
 @import "fonts";
 @import "general";
 @import "button";
 
-
 //blocks
 @import "blocks/header";
 @import "blocks/social";
+
+@import "blocks/main/works"
+

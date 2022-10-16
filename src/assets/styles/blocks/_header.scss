@@ -4,7 +4,7 @@
    .header__info-inner {
       display: none;
 
-      @include braikpoint (830px) {
+      @include braikpoint ($br-tablet-md) {
          display: flex;
       }
    }
@@ -20,7 +20,7 @@
    .header__info-inner {
       display: none;
 
-      @include braikpoint (830px) {
+      @include braikpoint ($br-tablet-md) {
          display: flex;
       }
    }
@@ -28,7 +28,7 @@
    .header__info-tel {
       margin-right: 4rem;
 
-      @include braikpoint (580px) {
+      @include braikpoint ($br-mobile-sm) {
          display: none;
       }
    }
@@ -45,7 +45,7 @@
 .header__list {
    display: flex;
 
-   @include braikpoint (830px) {
+   @include braikpoint ($br-tablet-md) {
       display: none;
    }
 }
@@ -87,7 +87,7 @@
    .header__list {
       display: none;
    
-      @include braikpoint (830px) {
+      @include braikpoint ($br-tablet-md) {
          display: flex;
          justify-content: space-between;
          
@@ -102,7 +102,7 @@
          }
       }
 
-      @include braikpoint (580px) {
+      @include braikpoint ($br-mobile-sm) {
          display: none;
       }
    }
@@ -136,11 +136,11 @@
    justify-content: space-between;
    min-height: 4.5rem;
 
-   @include braikpoint (830px) {
+   @include braikpoint ($br-tablet-md) {
       display: none;
    }
 
-   @include braikpoint (580px) {
+   @include braikpoint ($br-mobile-sm) {
       display: flex;
       justify-content: space-between;
 

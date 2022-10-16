@@ -34,7 +34,19 @@
       width: 10px;
    }
 
-   @include braikpoint (580px) {
+   @include braikpoint ($br-mobile-sm) {
       display: flex;
    }
+}
+
+// btn
+.btn {
+   font-weight: 700;
+   font-size: 1.6rem;
+   line-height: 1.9rem;
+   text-align: center;
+   color: $color1;
+   background-color: $color-btn;
+   padding: 15px 22px;
+   border: none;
 }

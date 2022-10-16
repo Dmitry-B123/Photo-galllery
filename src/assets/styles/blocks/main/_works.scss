@@ -1,0 +1,115 @@
+.works {
+   padding: 4rem 0;
+   display: flex;
+   gap: 3rem;
+   justify-content: space-between;
+   
+   @include braikpoint ($br-mobile-sm) {
+      flex-wrap: wrap;
+   }
+}
+
+.works__master-class,
+.works__photo {
+   flex-basis: 50%;
+
+   @include braikpoint ($br-mobile-sm) {
+      flex-basis: 100%;
+   }
+}
+
+// works__master-class
+.works__master-class {
+   position: relative;
+   
+   .works__master-img {
+      
+      source, img {
+         object-fit: cover;
+         width: 100%;
+         height: 100%;
+      }
+   }
+
+   .works__master-span {
+      display: block;
+      background: #333333;
+      color: $color1;
+      position: absolute;
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      text-align: center;
+      padding: 7px 15px;
+      top: 15px;
+      right: 15px;
+   }
+
+   .works__master-info {
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      color: $color1;
+
+      .works__master-name {
+         font-size: 1.6rem;
+         line-height: 1.9rem;
+      }
+
+      .works__master-title {
+         max-width: 24rem;
+         font-size: 3.4rem;
+         line-height: 95%;
+         font-family: $fontTTB;
+         margin: 14px 0 23px;
+         
+         @include braikpoint ($br-tablet-md) {
+            max-width: 80%;
+            font-size: 2.5rem;
+         }
+
+         @include braikpoint ($br-mobile-sm) {
+            max-width: 24rem;
+            font-size: 3.4rem;
+         }
+
+         @include braikpoint ($br-mobile) {
+            max-width: 80%;
+            font-size: 2.4rem;
+         }
+      }
+   }
+}
+
+// works__photo 
+.works__photo {
+   .works__photo-title {
+      margin-top: 0;
+      margin-bottom: 1.7rem;
+      font-family: $fontTTB;
+      font-size: 2.2rem;
+      line-height: 104%;
+
+      @include braikpoint ($br-tablet-md) {
+         font-size: 1.8rem;
+      }
+   }
+
+   .works__photos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+
+      .works__photo-img:first-child {
+         grid-column: 1/3;
+      }
+
+      .works__photo-img {
+         
+         source, img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+         }
+      }
+   }
+}
