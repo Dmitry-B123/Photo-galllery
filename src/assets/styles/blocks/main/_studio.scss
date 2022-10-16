@@ -1,0 +1,89 @@
+.studio {
+   background-color: $bgfirst;
+}
+
+.studio__inner {
+   display: flex;
+   justify-content: space-between;
+   gap: 3rem;
+   padding: 3rem 0 7rem;
+   
+   @include braikpoint ($br-mobile-sm) {
+      flex-direction: column;
+   }
+}
+
+.studio__action,
+.studio__info {
+   width: 50%;
+
+   @include braikpoint ($br-mobile-sm) {
+      width: 100%;
+   }
+}
+
+.studio__info {
+   color: $color1;
+
+   .studio__title {
+      font-family: $fontTTB;
+      font-size: 2.5rem;
+      line-height: 3.1rem;
+      margin-top: 0;
+      margin-bottom: 2rem;
+   }
+
+   .studio__description {
+      font-size: 1.6rem;
+      line-height: 2.8rem;
+      color: #CACACA;
+
+      @include braikpoint ($br-mobile-sm) {
+         font-size: 1.4rem;
+      }
+
+      @include braikpoint (700px) {
+         max-height: 80rem;
+         overflow: auto;
+      }
+   }
+}
+
+.studio__action {
+   padding-top: 5rem;
+
+   @include braikpoint ($br-mobile-sm) {
+      padding-top: 0;
+   }
+
+   img, source {
+      width: 100%;
+   }
+
+   .studio__action-title {
+      font-size: 2.4rem;
+      line-height: 2.2rem;
+      color: $color1;
+      font-family: $fontTTR;
+      font-weight: 400;
+      margin-top: 2.5rem;
+   }
+
+   .studio__form {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 2rem;
+   }
+
+   .studio__form-email {
+      background: rgba(#4A4A4A, 0.4);
+      padding: 16px 15px 16px 26px;
+      border: none;
+      color: #CACACA;
+      font-size: 1.6rem;
+      line-height: 1.9rem; 
+      width: 45rem; 
+   }
+}

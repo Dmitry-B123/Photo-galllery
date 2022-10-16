@@ -49,4 +49,9 @@
    background-color: $color-btn;
    padding: 15px 22px;
    border: none;
+
+   &:active,
+   &:focus {
+      background-color: $color-active;
+   }
 }
