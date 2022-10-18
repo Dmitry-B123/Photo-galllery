@@ -29,6 +29,19 @@ nav {
    padding: 0;
 }
 
+img,
+source {
+   width: 100%;
+}
+
+.title-blocks {
+   font-size: 2.4rem;
+   line-height: 3.1rem;
+   color: $color2;
+   margin-top: 0;
+   margin-bottom: 1.5rem;
+}
+
 .container {
    max-width: 1290px;
    margin: 0 auto;

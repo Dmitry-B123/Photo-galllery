@@ -3,3 +3,17 @@
       @content;
    }
 }
+
+
+@mixin info-span {
+   display: block;
+   background: #333333;
+   color: $color1;
+   position: absolute;
+   font-size: 1.4rem;
+   line-height: 1.6rem;
+   text-align: center;
+   padding: 7px 15px;
+   top: 15px;
+   right: 15px;
+}
