@@ -334,7 +334,23 @@
       background-color: #C4C4C4;
    }
 
+   .project__tabs-btn:hover {
+      background-color: #E9E9E9;
+      color: $color-hover;
+   }
+
+   .project__tabs-btn:focus {
+      background-color: #FFD4C1;
+      color: $color2;
+   }
+
    .project__tabs-btn--active {
       background-color: $color-btn;
    }
+
+   .project__tabs-btn--active:hover,
+   .project__tabs-btn--active:focus {
+      background-color: $color-btn;
+      color: $color1;
+   } 
 }

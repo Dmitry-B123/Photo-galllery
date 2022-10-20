@@ -1,0 +1,308 @@
+.services {
+   padding: 4rem 0;
+}
+
+.services__title {
+   margin-bottom: 0;
+}
+
+//services__tabs-btns
+.services__tabs-btns {
+   margin: 1rem 0 3rem;
+   padding-bottom: 0.3rem;
+   border-bottom: 4px solid #C4C4C4;
+   display: inline-block;
+   position: relative;
+
+   .services__tabs-btn:first-child {
+      margin-right: 13rem;
+
+      @include braikpoint(440px) {
+         margin-right: 3rem;
+      }
+
+      @include braikpoint(300px) {
+         margin-right: 1rem;
+      }
+   }
+
+   .services__tabs-btn {
+      color: #666666;
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 2.8rem;
+      border: none;
+      background: inherit;
+      display: inline-block;
+      padding: 0;
+
+      @include braikpoint(440px) {
+         font-size: 1.4rem;
+      }
+   }
+
+   .services__tabs-btn:hover {
+      color: $color-btn;
+   }
+
+   .services__tabs-btn--active {
+      color: $color-btn;
+   }
+
+   .services__tabs-line {
+      position: absolute;
+      bottom: -4px;
+      width: 0;
+      left: 0;
+      height: 4px;
+      background-color: $color-hover;
+   }
+
+   .services__tabs-line:last-child {
+      right: 0;
+      left: inherit;
+   }
+
+   .services__tabs-btn--active + .services__tabs-line {
+      width: 35%;
+
+      @include braikpoint(440px) {
+         width: 45%;
+      }
+   }
+}
+
+
+//services__grid
+.services__grid {
+   display: none;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 3rem;
+
+   .services__item:first-child {
+      grid-column: 1/3;
+
+      @include braikpoint(880px) {
+         grid-column: 1/4;
+      }
+   }
+
+   .services__item:last-child {
+      grid-column: 3/4;
+      display: grid;
+
+      @include braikpoint(880px) {
+         grid-column: 1/4;
+      }
+
+      img {
+         height: 100%;
+      }
+   }
+}
+
+.services__grid--active {
+   display: grid;
+}
+
+//services__grid-1
+.services__grid-1 {
+   .services__row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+
+      &-item-1 {
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         gap: 3rem;
+
+         @include braikpoint(880px) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1rem;
+         }
+
+         img {
+            height: 100%;
+         }
+      }
+   }
+
+   .services__item:first-child  {
+      .services__row{
+         @include braikpoint(880px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+         }
+
+         @include braikpoint($br-mobile-sm) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1rem;
+         }
+      }
+   }
+   
+}
+
+//services__grid-2
+.services__grid-2 {
+   .services__row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+   }
+
+   .services__row-1 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+
+      .services__row-item {
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         gap: 3rem;
+
+         @include braikpoint($br-tablet-lg) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1rem;
+         }
+
+         .services__row-info {
+            max-width: 19rem;
+            overflow: hidden;
+         }
+      }
+   }
+}
+
+.services__row-images {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+   gap: 2.5rem;
+
+   @include braikpoint($br-mobile) {
+      grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+   }
+}
+
+//styles elements
+.services__row-info {
+   .services__row-title {
+      color: $color2;
+      font-size: 2.4rem;
+      line-height: 2.2rem;
+      font-family: $fontTTR;
+      margin-bottom: 0.5rem;
+      margin-top: 1rem;
+
+      @include braikpoint($br-mobile) {
+         font-size: 1.6rem;
+         line-height: 1.6rem;
+      }
+   }
+
+   .services__row-description {
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+      color: #999999;
+      margin-bottom: 1.1rem;
+      padding-top: 1rem;
+   }
+
+   .services__row-link {
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 2.8rem;
+      color: $color-hover;
+      display: inline-block;
+      padding: 5px;
+   }
+}
+
+.services__row-link {
+   img {
+      width: 19px;
+      height: 13px;
+   }
+
+   &:hover {
+      background: #FFD4C1;
+   }
+}
+
+.services__row-item {
+   position: relative;
+
+   .services__row-stock {
+      position: absolute;
+      top: 2rem;
+      left: 3rem;
+      color: #FFF500;
+      display: flex;
+      flex-direction: column;
+
+      .services__row-strong {
+         font-size: 3.4rem;
+         font-family: $fontTTB;
+      }
+
+      .services__row-span {
+         font-weight: 700;
+         font-size: 1.6rem;
+         line-height: 2.2rem;
+      }
+   }
+
+   .services__row-discount {
+      position: absolute;
+      bottom: 14rem;
+      left: 3rem;
+      color: #FFF500;
+      border-radius: 50%;
+      border: 3px solid #FFF500;
+      font-size: 3rem;
+      padding: 10px 19px;
+
+      
+
+      @include braikpoint(880px) {
+         right: 3rem;
+         top: 2rem;
+         left: inherit;
+         bottom: inherit;  
+      }
+      
+      @include braikpoint(300px) {
+         right: 1rem;
+         padding: 1rem;
+      }
+   }
+
+   .services__row-info-1 {
+      position: absolute;
+      bottom: 3rem;
+      left: 3rem;
+
+      .services__row-info-description {
+         font-size: 1.6rem;
+         line-height: 2.2rem;
+         color: $color1;
+         max-width: 22rem;
+         margin-bottom: 3rem;
+
+         @include braikpoint($br-mobile-sm) {
+            max-width: 50rem;
+         }
+
+         @include braikpoint(440px) {
+            max-width: 22rem;
+         }
+      }
+   }
+
+   .services__row-item-title {
+      margin-top: 3rem;
+   }
+}
+
+
