@@ -42,6 +42,12 @@ source {
    margin-bottom: 1.5rem;
 }
 
+.form-input__states {
+   &:hover::placeholder {
+      color: $color-hover;
+   }
+}
+
 .container {
    max-width: 1290px;
    margin: 0 auto;
