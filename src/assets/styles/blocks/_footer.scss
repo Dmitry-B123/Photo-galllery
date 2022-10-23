@@ -1,0 +1,93 @@
+.footer {
+   background-color: $bgfirst;
+   padding: 2.4rem 1.6rem;
+   position: relative;
+   z-index: -1;
+   
+   @include braikpoint (500px) {
+      &::after {
+         content: "";
+         display: block;
+         position: absolute;
+         top: 55%;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         background: rgba($bgsecond, 0.5);
+         z-index: -1;
+      }
+   }
+}
+
+.footer__inner {
+   display: flex;
+   justify-content: space-between;
+   color: $color3;
+   font-size: 1.6rem;
+   line-height: 2.2rem;
+   z-index: 20;
+
+   @include braikpoint (500px) {
+      flex-direction: column;
+      align-items: center;
+   }
+}
+
+.footer__logo {
+   img {
+      width: auto;
+      max-width: 100%;
+   }
+
+   @include braikpoint (500px) {
+      order: 2;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding-top: 1.5rem;
+   }
+}
+
+.footer__markright {
+   font-size: 1.4rem;
+   line-height: 1.8rem;
+   font-family: $fontTTR;
+   margin-top: 0.7rem;
+}
+
+.footer__info {
+   max-width: 36rem;
+
+   @include braikpoint (870px) {
+      display: none;
+   }
+
+   .footer__quote {
+      margin: 0;
+   }
+   
+   .footer__copyright {
+      color: #666666;
+   }
+}
+
+.footer__social {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   @include braikpoint (500px) {
+      padding: 1rem 0 3rem;
+   }
+
+   .footer__social-info {
+      display: block;
+      margin-bottom: 0.7rem;   
+   }
+
+   .social {
+      @include braikpoint (970px) {
+         display: flex;
+      }
+   }
+}
